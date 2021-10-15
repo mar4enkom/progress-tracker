@@ -69,7 +69,7 @@ const Modal = () => {
                                 <input type="text" className="form-control" id="recipient-name" />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="message-text" className="col-form-label">Description:</label>
+                                <label htmlFor="message-text" className="col-form-label">Descriptionx:</label>
                                 <textarea className="form-control" id="message-text"></textarea>
                             </div>
                         </form>
