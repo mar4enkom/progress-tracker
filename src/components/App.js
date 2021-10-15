@@ -12,7 +12,7 @@ export default function App () {
 
     const displayCards = (arr, category) => {
         return arr.filter(item => item.status === category)
-                  .map(item => <Card {...item} />)
+                  .map(item => <Card {...item} key={item.id} />)
     }
 
     return(

@@ -17,8 +17,14 @@ export default function Modal() {
         setTitle(e.target.value)
     }
 
+    const onDescriptionChange = (e) => {
+        setDescription(e.target.value)
+    }
+
     const onAddModal = () => {
-        if(!errors) add_item({title, description})
+        if(errors.length === 0) {
+            add_item({title, description})
+        }
     }
 
     return(
@@ -44,7 +50,11 @@ export default function Modal() {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="message-text" className="col-form-label">Description:</label>
-                                <textarea className="form-control" id="message-text"></textarea>
+                                <textarea
+                                    className="form-control"
+                                    id="message-text"
+                                    onChange={onDescriptionChange}
+                                    value={description}></textarea>
                             </div>
                         </form>
                     </div>

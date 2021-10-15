@@ -8,7 +8,7 @@ import './card.css';
 export default function Card({title, description}){
 
     return(
-        <div className="card">
+        <div className="card mt-3">
             <h5 className="card-header d-flex justify-content-between">
                 {title}
                 <div className="dropdown show">
