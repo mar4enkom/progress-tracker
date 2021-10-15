@@ -5,7 +5,7 @@ import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 
 import './card.css';
 
-export default function Card({title, description}){
+export default function Card({title, description, status}){
 
     return(
         <div className="card mt-3">
@@ -19,9 +19,7 @@ export default function Card({title, description}){
                     </a>
 
                     <div className="dropdown-menu dropdown-custom" aria-labelledby="dropdownMenuLink">
-                        <a className="dropdown-item" href="#">На попередній етап</a>
-                        <a className="dropdown-item" href="#">На наступний етап</a>
-                        <a className="dropdown-item" href="#">Видалити</a>
+                        <CardMenu status={status} />
                     </div>
                 </div>
             </h5>
@@ -29,5 +27,32 @@ export default function Card({title, description}){
                 <p className="card-text">{description}</p>
             </div>
         </div>
+    )
+}
+
+const CardMenu = ({status}) => {
+    console.log(status)
+    if(status === 'todo'){
+        return (
+            <>
+                <a className="dropdown-item" href="#">На наступний етап</a>
+                <a className="dropdown-item" href="#">Видалити</a>
+            </>
+        )
+    } else if( status === 'done') {
+        return (
+            <>
+                <a className="dropdown-item" href="#">На попередній етап</a>
+                <a className="dropdown-item" href="#">Видалити</a>
+            </>
+        )
+    }
+
+    return (
+        <>
+            <a className="dropdown-item" href="#">На попередній етап</a>
+            <a className="dropdown-item" href="#">На наступний етап</a>
+            <a className="dropdown-item" href="#">Видалити</a>
+        </>
     )
 }
