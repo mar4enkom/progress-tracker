@@ -1,0 +1,14 @@
+.hover{
+    transition: .3s ease-in;
+    cursor: pointer;
+}
+
+.hover:hover{
+    opacity: .8;
+}
+
+.dropdown-custom{
+    z-index: 9999 !important;
+    background: #596CB6;
+    transform: translate3d(-140px, 40px, 0px) !important;
+}
