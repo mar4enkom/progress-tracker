@@ -5,12 +5,12 @@ import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 
 import './card.css';
 
-export default function Card({label, description}){
+export default function Card({title, description}){
 
     return(
         <div className="card">
             <h5 className="card-header d-flex justify-content-between">
-                {label}
+                {title}
                 <div className="dropdown show">
                     <a className="btn btn-secondary" href="#" role="button" id="dropdownMenuLink"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

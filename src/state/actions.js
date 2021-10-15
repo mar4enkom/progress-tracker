@@ -6,3 +6,12 @@ export const test = (payload) => {
         });
     };
 }
+
+export const add_item = (payload) => {
+    return (dispatch) => {
+        dispatch({
+           type: "ADD_ITEM",
+           payload
+        });
+    }
+}
